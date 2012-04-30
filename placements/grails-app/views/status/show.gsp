@@ -43,11 +43,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${statusInstance?.sescription}">
+				<g:if test="${statusInstance?.description}">
 				<li class="fieldcontain">
-					<span id="sescription-label" class="property-label"><g:message code="status.sescription.label" default="Sescription" /></span>
+					<span id="description-label" class="property-label"><g:message code="status.description.label" default="Description" /></span>
 					
-						<span class="property-value" aria-labelledby="sescription-label"><g:fieldValue bean="${statusInstance}" field="sescription"/></span>
+						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${statusInstance}" field="description"/></span>
 					
 				</li>
 				</g:if>

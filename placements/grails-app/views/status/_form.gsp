@@ -27,11 +27,11 @@
 	<g:textField name="code" value="${statusInstance?.code}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: statusInstance, field: 'sescription', 'error')} ">
-	<label for="sescription">
-		<g:message code="status.sescription.label" default="Sescription" />
+<div class="fieldcontain ${hasErrors(bean: statusInstance, field: 'description', 'error')} ">
+	<label for="description">
+		<g:message code="status.description.label" default="Description" />
 		
 	</label>
-	<g:textField name="sescription" value="${statusInstance?.sescription}"/>
+	<g:textField name="description" value="${statusInstance?.description}"/>
 </div>
 

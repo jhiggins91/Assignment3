@@ -26,7 +26,7 @@
 					
 						<g:sortableColumn property="code" title="${message(code: 'status.code.label', default: 'Code')}" />
 					
-						<g:sortableColumn property="sescription" title="${message(code: 'status.sescription.label', default: 'Sescription')}" />
+						<g:sortableColumn property="description" title="${message(code: 'status.description.label', default: 'Description')}" />
 					
 					</tr>
 				</thead>
@@ -36,7 +36,7 @@
 					
 						<td><g:link action="show" id="${statusInstance.id}">${fieldValue(bean: statusInstance, field: "code")}</g:link></td>
 					
-						<td>${fieldValue(bean: statusInstance, field: "sescription")}</td>
+						<td>${fieldValue(bean: statusInstance, field: "description")}</td>
 					
 					</tr>
 				</g:each>
