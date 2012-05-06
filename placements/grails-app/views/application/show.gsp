@@ -59,15 +59,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${applicationInstance?.state}">
-				<li class="fieldcontain">
-					<span id="state-label" class="property-label"><g:message code="application.state.label" default="State" /></span>
-					
-						<span class="property-value" aria-labelledby="state-label"><g:link controller="status" action="show" id="${applicationInstance?.state?.id}">${applicationInstance?.state?.encodeAsHTML()}</g:link></span>
-					
-				</li>
-				</g:if>
-			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

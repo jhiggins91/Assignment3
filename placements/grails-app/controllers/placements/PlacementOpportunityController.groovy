@@ -108,5 +108,12 @@ def listOpenPlacements(){
         xml {render response as XML}
 }
 }
+def listApplicants(){
+   def response = PlacementOpportunity.findBy(placementID : "2")
+   withFormat {
+	json {render response as JSON}
+        xml {render response as XML}
+}
+}
 }
 

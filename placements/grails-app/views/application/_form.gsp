@@ -34,11 +34,3 @@
 	<g:datePicker name="timeStamp" precision="day"  value="${applicationInstance?.timeStamp}"  />
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: applicationInstance, field: 'state', 'error')} required">
-	<label for="state">
-		<g:message code="application.state.label" default="State" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:select id="state" name="state.id" from="${placements.Status.list()}" optionKey="id" required="" value="${applicationInstance?.state?.id}" class="many-to-one"/>
-</div>
-

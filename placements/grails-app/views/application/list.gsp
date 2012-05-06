@@ -32,8 +32,6 @@
 					
 						<g:sortableColumn property="timeStamp" title="${message(code: 'application.timeStamp.label', default: 'Time Stamp')}" />
 					
-						<th><g:message code="application.state.label" default="State" /></th>
-					
 					</tr>
 				</thead>
 				<tbody>
@@ -47,8 +45,6 @@
 						<td>${fieldValue(bean: applicationInstance, field: "status")}</td>
 					
 						<td><g:formatDate date="${applicationInstance.timeStamp}" /></td>
-					
-						<td>${fieldValue(bean: applicationInstance, field: "state")}</td>
 					
 					</tr>
 				</g:each>
