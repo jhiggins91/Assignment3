@@ -2,12 +2,20 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: placementOpportunityInstance, field: 'applications', 'error')} ">
-	<label for="applications">
-		<g:message code="placementOpportunity.applications.label" default="Applications" />
+<div class="fieldcontain ${hasErrors(bean: placementOpportunityInstance, field: 'placementID', 'error')} ">
+	<label for="placementID">
+		<g:message code="placementOpportunity.placementID.label" default="Placement ID" />
 		
 	</label>
-	<g:textField name="applications" value="${placementOpportunityInstance?.applications}"/>
+	<g:textField name="placementID" value="${placementOpportunityInstance?.placementID}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: placementOpportunityInstance, field: 'jobTitle', 'error')} ">
+	<label for="jobTitle">
+		<g:message code="placementOpportunity.jobTitle.label" default="Job Title" />
+		
+	</label>
+	<g:textField name="jobTitle" value="${placementOpportunityInstance?.jobTitle}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: placementOpportunityInstance, field: 'companyName', 'error')} ">
@@ -18,12 +26,12 @@
 	<g:textField name="companyName" value="${placementOpportunityInstance?.companyName}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: placementOpportunityInstance, field: 'jobTitle', 'error')} ">
-	<label for="jobTitle">
-		<g:message code="placementOpportunity.jobTitle.label" default="Job Title" />
+<div class="fieldcontain ${hasErrors(bean: placementOpportunityInstance, field: 'applications', 'error')} ">
+	<label for="applications">
+		<g:message code="placementOpportunity.applications.label" default="Applications" />
 		
 	</label>
-	<g:textField name="jobTitle" value="${placementOpportunityInstance?.jobTitle}"/>
+	<g:textField name="applications" value="${placementOpportunityInstance?.applications}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: placementOpportunityInstance, field: 'status', 'error')} ">

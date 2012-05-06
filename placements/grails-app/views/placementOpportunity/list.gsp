@@ -24,11 +24,13 @@
 				<thead>
 					<tr>
 					
-						<g:sortableColumn property="applications" title="${message(code: 'placementOpportunity.applications.label', default: 'Applications')}" />
+						<g:sortableColumn property="placementID" title="${message(code: 'placementOpportunity.placementID.label', default: 'Placement ID')}" />
+					
+						<g:sortableColumn property="jobTitle" title="${message(code: 'placementOpportunity.jobTitle.label', default: 'Job Title')}" />
 					
 						<g:sortableColumn property="companyName" title="${message(code: 'placementOpportunity.companyName.label', default: 'Company Name')}" />
 					
-						<g:sortableColumn property="jobTitle" title="${message(code: 'placementOpportunity.jobTitle.label', default: 'Job Title')}" />
+						<g:sortableColumn property="applications" title="${message(code: 'placementOpportunity.applications.label', default: 'Applications')}" />
 					
 						<g:sortableColumn property="status" title="${message(code: 'placementOpportunity.status.label', default: 'Status')}" />
 					
@@ -38,11 +40,13 @@
 				<g:each in="${placementOpportunityInstanceList}" status="i" var="placementOpportunityInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${placementOpportunityInstance.id}">${fieldValue(bean: placementOpportunityInstance, field: "applications")}</g:link></td>
+						<td><g:link action="show" id="${placementOpportunityInstance.id}">${fieldValue(bean: placementOpportunityInstance, field: "placementID")}</g:link></td>
+					
+						<td>${fieldValue(bean: placementOpportunityInstance, field: "jobTitle")}</td>
 					
 						<td>${fieldValue(bean: placementOpportunityInstance, field: "companyName")}</td>
 					
-						<td>${fieldValue(bean: placementOpportunityInstance, field: "jobTitle")}</td>
+						<td>${fieldValue(bean: placementOpportunityInstance, field: "applications")}</td>
 					
 						<td>${fieldValue(bean: placementOpportunityInstance, field: "status")}</td>
 					

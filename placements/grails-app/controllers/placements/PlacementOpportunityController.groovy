@@ -1,4 +1,5 @@
 package placements
+import grails.converters.*;
 
 import org.springframework.dao.DataIntegrityViolationException
 
@@ -100,4 +101,12 @@ class PlacementOpportunityController {
             redirect(action: "show", id: params.id)
         }
     }
+def listOpenPlacements(){
+   def response = PlacementOpportunity.findAllWhere(status: "Open")
+   withFormat {
+	json {render response as JSON}
+        xml {render response as XML}
 }
+}
+}
+

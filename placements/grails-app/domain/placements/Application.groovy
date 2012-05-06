@@ -6,6 +6,12 @@ String placement
 String status
 Date timeStamp
 static hasOne = [state : Status]
-    static constraints = {
-    }
+static belongsTo = [student : Student, placement : PlacementOpportunity]
+
+	static constraints = {
+    student()
+    placement()
+    status()
+    timeStamp()
+}
 }

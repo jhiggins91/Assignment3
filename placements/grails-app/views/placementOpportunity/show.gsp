@@ -23,11 +23,20 @@
 			</g:if>
 			<ol class="property-list placementOpportunity">
 			
-				<g:if test="${placementOpportunityInstance?.applications}">
+				<g:if test="${placementOpportunityInstance?.placementID}">
 				<li class="fieldcontain">
-					<span id="applications-label" class="property-label"><g:message code="placementOpportunity.applications.label" default="Applications" /></span>
+					<span id="placementID-label" class="property-label"><g:message code="placementOpportunity.placementID.label" default="Placement ID" /></span>
 					
-						<span class="property-value" aria-labelledby="applications-label"><g:fieldValue bean="${placementOpportunityInstance}" field="applications"/></span>
+						<span class="property-value" aria-labelledby="placementID-label"><g:fieldValue bean="${placementOpportunityInstance}" field="placementID"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${placementOpportunityInstance?.jobTitle}">
+				<li class="fieldcontain">
+					<span id="jobTitle-label" class="property-label"><g:message code="placementOpportunity.jobTitle.label" default="Job Title" /></span>
+					
+						<span class="property-value" aria-labelledby="jobTitle-label"><g:fieldValue bean="${placementOpportunityInstance}" field="jobTitle"/></span>
 					
 				</li>
 				</g:if>
@@ -41,11 +50,11 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${placementOpportunityInstance?.jobTitle}">
+				<g:if test="${placementOpportunityInstance?.applications}">
 				<li class="fieldcontain">
-					<span id="jobTitle-label" class="property-label"><g:message code="placementOpportunity.jobTitle.label" default="Job Title" /></span>
+					<span id="applications-label" class="property-label"><g:message code="placementOpportunity.applications.label" default="Applications" /></span>
 					
-						<span class="property-value" aria-labelledby="jobTitle-label"><g:fieldValue bean="${placementOpportunityInstance}" field="jobTitle"/></span>
+						<span class="property-value" aria-labelledby="applications-label"><g:fieldValue bean="${placementOpportunityInstance}" field="applications"/></span>
 					
 				</li>
 				</g:if>

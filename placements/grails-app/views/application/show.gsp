@@ -23,20 +23,20 @@
 			</g:if>
 			<ol class="property-list application">
 			
+				<g:if test="${applicationInstance?.student}">
+				<li class="fieldcontain">
+					<span id="student-label" class="property-label"><g:message code="application.student.label" default="Student" /></span>
+					
+						<span class="property-value" aria-labelledby="student-label"><g:fieldValue bean="${applicationInstance}" field="student"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${applicationInstance?.placement}">
 				<li class="fieldcontain">
 					<span id="placement-label" class="property-label"><g:message code="application.placement.label" default="Placement" /></span>
 					
 						<span class="property-value" aria-labelledby="placement-label"><g:fieldValue bean="${applicationInstance}" field="placement"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${applicationInstance?.state}">
-				<li class="fieldcontain">
-					<span id="state-label" class="property-label"><g:message code="application.state.label" default="State" /></span>
-					
-						<span class="property-value" aria-labelledby="state-label"><g:link controller="status" action="show" id="${applicationInstance?.state?.id}">${applicationInstance?.state?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>
@@ -50,20 +50,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${applicationInstance?.student}">
-				<li class="fieldcontain">
-					<span id="student-label" class="property-label"><g:message code="application.student.label" default="Student" /></span>
-					
-						<span class="property-value" aria-labelledby="student-label"><g:fieldValue bean="${applicationInstance}" field="student"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${applicationInstance?.timeStamp}">
 				<li class="fieldcontain">
 					<span id="timeStamp-label" class="property-label"><g:message code="application.timeStamp.label" default="Time Stamp" /></span>
 					
 						<span class="property-value" aria-labelledby="timeStamp-label"><g:formatDate date="${applicationInstance?.timeStamp}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${applicationInstance?.state}">
+				<li class="fieldcontain">
+					<span id="state-label" class="property-label"><g:message code="application.state.label" default="State" /></span>
+					
+						<span class="property-value" aria-labelledby="state-label"><g:link controller="status" action="show" id="${applicationInstance?.state?.id}">${applicationInstance?.state?.encodeAsHTML()}</g:link></span>
 					
 				</li>
 				</g:if>

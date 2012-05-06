@@ -2,20 +2,12 @@
 
 
 
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'applications', 'error')} ">
-	<label for="applications">
-		<g:message code="student.applications.label" default="Applications" />
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'studentID', 'error')} ">
+	<label for="studentID">
+		<g:message code="student.studentID.label" default="Student ID" />
 		
 	</label>
-	<g:textField name="applications" value="${studentInstance?.applications}"/>
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'courseCode', 'error')} ">
-	<label for="courseCode">
-		<g:message code="student.courseCode.label" default="Course Code" />
-		
-	</label>
-	<g:textField name="courseCode" value="${studentInstance?.courseCode}"/>
+	<g:textField name="studentID" value="${studentInstance?.studentID}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'name', 'error')} ">
@@ -26,11 +18,27 @@
 	<g:textField name="name" value="${studentInstance?.name}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'courseCode', 'error')} ">
+	<label for="courseCode">
+		<g:message code="student.courseCode.label" default="Course Code" />
+		
+	</label>
+	<g:textField name="courseCode" value="${studentInstance?.courseCode}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'notes', 'error')} ">
 	<label for="notes">
 		<g:message code="student.notes.label" default="Notes" />
 		
 	</label>
 	<g:textField name="notes" value="${studentInstance?.notes}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: studentInstance, field: 'applications', 'error')} ">
+	<label for="applications">
+		<g:message code="student.applications.label" default="Applications" />
+		
+	</label>
+	<g:textField name="applications" value="${studentInstance?.applications}"/>
 </div>
 
